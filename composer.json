@@ -1,0 +1,16 @@
+{
+    "name": "nixon/slim3-custom-routing",
+    "description": "a random try out project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Nixon Kosgei",
+            "email": "nkosgey6@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "symfony/var-dumper": "5.0.8",
+        "slim/slim": "3.12.3"
+    }
+}
