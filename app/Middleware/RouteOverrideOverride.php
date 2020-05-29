@@ -16,9 +16,15 @@ class RouteOverrideOverride
 {
     public function __invoke(Request $request, Response $response, $next)
     {
+        /**
+         * @param $level int|string used to navigate around instead of the common params
+         */
+        $level = $request->getQueryParam('level');
+
+
         $uri = $request->getUri();
         
-        $uri = $uri->withPath('/new');
+        $uri = $uri->withPath("/$level");
         
       $request =  $request->withUri($uri);
         
