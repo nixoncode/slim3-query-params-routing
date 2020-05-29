@@ -6,6 +6,7 @@
  * Time: 05:01
  */
 
+use App\Controllers\HomeController;
 use Slim\App;
 
 date_default_timezone_set('Africa/Nairobi');
@@ -21,9 +22,7 @@ $config = [
 $app = new App($config);
 
 
-$app->get('/', function ($request, $response){
-   $response->write('Hello World');
-});
+$app->get('/', HomeController::class);
 
 
 $app->run();
