@@ -7,6 +7,7 @@
  */
 
 use App\Controllers\HomeController;
+use App\Controllers\NewController;
 use App\Middleware\RouteOverrideOverride;
 use Slim\App;
 
@@ -22,9 +23,10 @@ $config = [
 
 $app = new App($config);
 
-$app->add(RouteOverrideOverride::class);
 
 $app->get('/', HomeController::class);
+$app->get('/new', NewController::class);
 
+$app->add(RouteOverrideOverride::class);
 
 $app->run();

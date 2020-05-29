@@ -16,6 +16,12 @@ class RouteOverrideOverride
 {
     public function __invoke(Request $request, Response $response, $next)
     {
-       return $next($request, $response);
+        $uri = $request->getUri();
+        
+        $uri = $uri->withPath('/new');
+        
+      $request =  $request->withUri($uri);
+        
+        return $next($request, $response);
     }
 }
