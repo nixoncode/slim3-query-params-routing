@@ -7,6 +7,7 @@
  */
 
 use App\Controllers\HomeController;
+use App\Middleware\RouteOverrideOverride;
 use Slim\App;
 
 date_default_timezone_set('Africa/Nairobi');
@@ -21,6 +22,7 @@ $config = [
 
 $app = new App($config);
 
+$app->add(RouteOverrideOverride::class);
 
 $app->get('/', HomeController::class);
 
