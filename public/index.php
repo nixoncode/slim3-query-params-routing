@@ -12,8 +12,13 @@ date_default_timezone_set('Africa/Nairobi');
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+$config = [
+    'settings' => [
+        'displayErrorDetails' => true,
+    ],
+];
 
-$app = new App();
+$app = new App($config);
 
 
 $app->get('/', function ($request, $response){
