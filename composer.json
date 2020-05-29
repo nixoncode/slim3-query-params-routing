@@ -12,5 +12,8 @@
     "require": {
         "symfony/var-dumper": "5.0.8",
         "slim/slim": "3.12.3"
+    },
+    "scripts": {
+        "start": "php -S 0.0.0.0:8080 -t public"
     }
 }
